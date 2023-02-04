@@ -46,7 +46,27 @@ public class budget {
 
     public void getGroceries() {
         this.groceries = ((this.income - this.rent) * 0.15);
+<<<<<<< HEAD
         System.out.println("You should be spending " + this.groceries + "on groceries per month.");}
+=======
+        System.out.println("You should be spending " + this.groceries + "on groceries per month.");
+    }
+
+    public budget(double income, double rent) {
+        this.income  = income;
+        this.rent = rent;
+    }
+
+<<<<<<< HEAD
+    // 
+=======
+    public double getTransportation() {
+<<<<<<< HEAD
+=======
+>>>>>>> 8ef57f8cd1acd1da032cbf50dcaac44a085eef1a
+>>>>>>> 572ed4f6f8631848a15ca4a6680860ec7120757a
+>>>>>>> 413773dfe22acdde3e6701ad19916ef325d5fe29
+>>>>>>> e0f1006b6d43a79217b5d0bb7d354aebdb4cb59e
 
 
     /* 
