@@ -12,7 +12,6 @@ public class budget {
     private double entertainment;
     private double bills;
 
-<<<<<<< HEAD
     Scanner keyIn= new Scanner(System.in);
 
     public budget(double income, double rent){
@@ -40,7 +39,6 @@ public class budget {
     }
 
 
-=======
     public budget(double rent) {
         this.rent = rent;
     }
@@ -55,7 +53,6 @@ public class budget {
     }
 
     public double getTransportation() {
->>>>>>> 8ef57f8cd1acd1da032cbf50dcaac44a085eef1a
 
     }
 }
