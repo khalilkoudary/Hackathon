@@ -10,42 +10,43 @@ public class budget {
     private double transportation;
     private double personal;
     private double bills;
-    Scanner keyIn = new Scanner(System.in);
+    private double moneyToSpend = income-rent-bills;
+    Scanner keyIn= new Scanner(System.in);
 
-    public budget(double income, double rent){
-        this.income= income;
+    public budget(double rent) {
         this.rent = rent;
     }
 
     public void getTransportation(){
         boolean input = true;
         while(input){
-            System.out.println("Enter 'C' if you own a car, or 'P' if you use public transit");
-            String answer = keyIn.nextLine();
-            if(answer.toLowerCase().equals("c")){
-                this.transportation= (0.15*(income-rent));
-                System.out.println("It is recommended to allocate around 15% of your income towards transportation if you own a car.\nFor you, that comes to: " + transportation);
-                input=false;
-            }
-            else if(answer.toLowerCase().equals("p")){
-                System.out.println("It is recommended to allocate anywhere from 5% to 10% of your income towards transportation if you use public transit.\nFor you, that comes to: " + (0.05*(income-rent))+"-"+(0.10*income));
-                input = false;
-            }
-            else{
-                System.out.println("Input cannot be recognized, please try again!");
-            }
+        System.out.println("Enter 'C' if you own a car, or 'P' if you use public transit");
+        String answer = keyIn.nextLine();
+        if(answer.toLowerCase().equals("c")){
+            this.transportation= (0.15*(this.moneyToSpend));
+            System.out.println("It is recommended to allocate around 15% of your income towards transportation if you own a car.\nFor you, that comes to: " + transportation);
+            input=false;
+        }
+        else if(answer.toLowerCase().equals("p")){
+            System.out.println("It is recommended to allocate anywhere from 5% to 10% of your income towards transportation if you use public transit.\nFor you, that comes to: " + (0.05*(moneyToSpend))+"-"+(0.10*moneyToSpend));
+            input = false;
+        }
+        else{
+            System.out.println("Input cannot be recognized, please try again!");
         }
     }
+}
+
 
     public void getGroceries() {
         this.groceries = ((this.income - this.rent) * 0.15);
         System.out.println("You should be spending " + this.groceries + "on groceries per month.");
     }
 
-    public double setSavings() {
+
+    public void setSavings() {
         double percentageOfIncome = 0.1;
         this.savings = this.income * percentageOfIncome;
-        return this.savings;
     }
 
     public void setBills() {
@@ -53,7 +54,8 @@ public class budget {
         System.out.println("Please indicate which bills you pay by typing the appropriate letters: /n phone = p /n hydro = h /n wifi = w /n insurance = i /n/n Type here: ");
         
         String billsInput = keyIn.nextLine();
-        billsInput.toLowerCase();
+        // Allocation of a maximum of 25% of total income to bills
+
 
         // phone = p
         if (billsInput.contains("p")) {
