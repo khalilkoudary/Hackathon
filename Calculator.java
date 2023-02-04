@@ -22,11 +22,11 @@ class Calculator{
         boolean menu = true;
 
         while(menu){
-            System.out.println("Please select one of the following options:");
-            System.out.println("1. Transportation\n2. Food \n3. Savings \n4. Personal \n")
+            System.out.println("Please select one of the following options by entering a number 1-4:");
+            System.out.println("1. Transportation\n2. Food \n3. Savings \n4. Personal \n");
 
 
-        }
+       }
 
     }
 
