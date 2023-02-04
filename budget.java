@@ -11,9 +11,12 @@ public class budget {
     private double transportation;
     private double entertainment;
     private double bills;
-    Scanner scanObj = new Scanner(System.in);
 
     Scanner keyIn= new Scanner(System.in);
+
+    public budget(double rent) {
+        this.rent = rent;
+    }
 
     public budget(double income, double rent){
         this.income= income;
@@ -38,30 +41,12 @@ public class budget {
             System.out.println("Input cannot be recognized, please try again!");
         }
     }
+}
 
-
-    public budget(double rent) {
-        this.rent = rent;
-    }
 
     public void getGroceries() {
         this.groceries = ((this.income - this.rent) * 0.15);
-        System.out.println("You should be spending " + this.groceries + "on groceries per month.");
-
-    public budget(double income, double rent) {
-        this.income  = income;
-        this.rent = rent;
-    }
-
-<<<<<<< HEAD
-    // 
-=======
-    public double getTransportation() {
-<<<<<<< HEAD
-=======
->>>>>>> 8ef57f8cd1acd1da032cbf50dcaac44a085eef1a
->>>>>>> 572ed4f6f8631848a15ca4a6680860ec7120757a
->>>>>>> 413773dfe22acdde3e6701ad19916ef325d5fe29
+        System.out.println("You should be spending " + this.groceries + "on groceries per month.");}
 
 
     /* 
@@ -77,13 +62,6 @@ public class budget {
     */ 
 
 
-
-    public double getTransportation(){
-        return 0;
-    }
-    
-
-
     public double setSavings() {
         double percentageOfIncome = 0.1;
         this.savings = this.income * percentageOfIncome;
@@ -94,7 +72,7 @@ public class budget {
         
         System.out.println("Please indicate which bills you pay by typing the appropriate letters: /n phone = p /n hydro = h /n wifi = w /n insurance = i /n/n Type here: ");
         
-        String billsInput = scanObj.nextLine();
+        String billsInput = keyIn.nextLine();
         // Allocation of a maximum of 25% of total income to bills
 
 
@@ -114,7 +92,7 @@ public class budget {
         if (billsInput.contains("w")) {
             Scanner wifiObj = new Scanner(System.in);
             System.out.println("Enter cost of wifi: ");
-            double wifi = scanObj.nextDouble();
+            double wifi = keyIn.nextDouble();
             this.bills += wifi;
         }
 
