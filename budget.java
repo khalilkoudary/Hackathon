@@ -1,15 +1,18 @@
 package Hackathon;
 import java.util.Scanner;
 
+import java.util.Scanner;
+
 public class budget {
     private double income;
     private double rent;
     private double groceries;
     private double savings;
     private double transportation;
-    private double entertainment; 
+    private double entertainment;
     private double bills;
 
+<<<<<<< HEAD
     Scanner keyIn= new Scanner(System.in);
 
     public budget(double income, double rent){
@@ -37,6 +40,22 @@ public class budget {
     }
 
 
+=======
+    public budget(double rent) {
+        this.rent = rent;
+    }
+
+    public void getGroceries() {
+        this.groceries = ((this.income - this.rent) * 0.15);
+        System.out.println("You should be spending " + this.groceries + "on groceries per month.");
+
+    public budget(double income, double rent) {
+        this.income = income;
+        this.rent = rent;
+    }
+
+    public double getTransportation() {
+>>>>>>> 8ef57f8cd1acd1da032cbf50dcaac44a085eef1a
 
     }
 }
