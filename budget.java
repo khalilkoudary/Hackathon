@@ -21,7 +21,7 @@ public class budget {
         this.rent = rent;
     }
 
-    public void getTransportation(){
+    public void setTransportation(){
         boolean input = true;
         while(input){
         System.out.println("Enter 'C' if you own a car, or 'P' if you use public transit");
@@ -58,24 +58,18 @@ public class budget {
 
     public void setBills() {
         
-<<<<<<< HEAD
-        System.out.println("Please indicate which bills you pay by typing the appropriate letters: \n phone = p \n hydro = h \n wifi = w \n insurance = i \n\n Type here: ");
-        String billsInput = keyIn.nextLine();
-        
-=======
+
         boolean[] bills = new boolean[5];
         for(int m=0; m<bills.length;m++){
             bills[m]=false;
         }
 
         String[] billNames = {"Phone", "Hydro", "WiFi", "Insurance", "Other"};
-
-        System.out.println("Please indicate which bills you pay by typing the appropriate letters: /n phone = p /n hydro = h /n wifi = w /n insurance = i /n/n Type here: ");
         
         for(int i=0; i<billNames.length;i++){
             System.out.println("Enter 1 if you pay for "+billNames[i] +" otherwise, enter 0:");
             int paid = keyIn.nextInt();
->>>>>>> c7c74502bfb86a9e89b45537ab9c3b96a4bfde79
+
 
             if(paid==1){
                 bills[i]=true;
@@ -108,12 +102,4 @@ public class budget {
         }
     }
         
-    }
-
-<<<<<<< HEAD
-    
-
-
 }
-=======
->>>>>>> c7c74502bfb86a9e89b45537ab9c3b96a4bfde79
