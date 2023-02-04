@@ -26,7 +26,12 @@ class Calculator{
             System.out.println("1. Transportation\n2. Food \n3. Savings \n4. Personal \n");
 
 
+<<<<<<< HEAD
        }
+=======
+        }
+        
+>>>>>>> c7c74502bfb86a9e89b45537ab9c3b96a4bfde79
 
     }
 

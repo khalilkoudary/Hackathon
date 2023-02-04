@@ -1,5 +1,7 @@
 package Hackathon;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner; 
 
 public class budget {
@@ -10,6 +12,7 @@ public class budget {
     private double transportation;
     private double personal;
     private double bills;
+    private double other;
     private double moneyToSpend = income-rent-bills;
     Scanner keyIn= new Scanner(System.in);
 
@@ -52,42 +55,65 @@ public class budget {
         System.out.println("You should allocate $" + this.savings + " to your savings each month.")
     }
 
+
     public void setBills() {
         
+<<<<<<< HEAD
         System.out.println("Please indicate which bills you pay by typing the appropriate letters: \n phone = p \n hydro = h \n wifi = w \n insurance = i \n\n Type here: ");
         String billsInput = keyIn.nextLine();
         
+=======
+        boolean[] bills = new boolean[5];
+        for(int m=0; m<bills.length;m++){
+            bills[m]=false;
+        }
 
-        // phone = p
-        if (billsInput.contains("p")) {
+        String[] billNames = {"Phone", "Hydro", "WiFi", "Insurance", "Other"};
+
+        System.out.println("Please indicate which bills you pay by typing the appropriate letters: /n phone = p /n hydro = h /n wifi = w /n insurance = i /n/n Type here: ");
+        
+        for(int i=0; i<billNames.length;i++){
+            System.out.println("Enter 1 if you pay for "+billNames[i] +" otherwise, enter 0:");
+            int paid = keyIn.nextInt();
+>>>>>>> c7c74502bfb86a9e89b45537ab9c3b96a4bfde79
+
+            if(paid==1){
+                bills[i]=true;
+            }
+        }
+        if (bills[0]==true){
             System.out.println("Enter cost of phone bill: ");
             double phone = keyIn.nextDouble();
             this.bills += phone;
         }
-
-        // hydro = h
-        if (billsInput.contains("h")) {
+        if(bills[1]==true){
             System.out.println("Enter cost of hydro: ");
             double hydro = keyIn.nextDouble();
             this.bills += hydro;
         }
-
-        // wifi = w
-        if (billsInput.contains("w")) {
+        if(bills[2]==true){
             System.out.println("Enter cost of wifi: ");
             double wifi = keyIn.nextDouble();
             this.bills += wifi;
         }
-
-        // insurance = i
-        if (billsInput.contains("i")) {
+        if(bills[3]==true){
             System.out.println("Enter cost of insurance: ");
             double insurance = keyIn.nextDouble();
             this.bills += insurance;
         }
+        if(bills[4]==true){
+            System.out.println("Enter cost of other expenses: ");
+            double other = keyIn.nextDouble();
+            this.bills += other;
+        }
+    }
+        
     }
 
+<<<<<<< HEAD
     
 
 
 }
+=======
+>>>>>>> c7c74502bfb86a9e89b45537ab9c3b96a4bfde79
