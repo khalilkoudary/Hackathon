@@ -51,13 +51,12 @@ public class budget {
     }
 
     public void setBills() {
-        
-        System.out.println("Please indicate which bills you pay by typing the appropriate letters: \nphone = p\n hydro = h \nwifi = w \ninsurance = i \n\n Type here: ");
-        
+
+        System.out.println(
+                "Please indicate which bills you pay by typing the appropriate letters: /n phone = p /n hydro = h /n wifi = w /n insurance = i /n/n Type here: ");
 
         String billsInput = keyIn.nextLine();
         // Allocation of a maximum of 25% of total income to bills
-        
 
         // phone = p
         if (billsInput.contains("p")) {
@@ -65,28 +64,26 @@ public class budget {
             double phone = keyIn.nextDouble();
             this.bills += phone;
         }
-
-        // hydro = h
-        if (billsInput.contains("h")) {
+        if (bills[1] == true) {
             System.out.println("Enter cost of hydro: ");
             double hydro = keyIn.nextDouble();
             this.bills += hydro;
         }
-
-        // wifi = w
-        if (billsInput.contains("w")) {
+        if (bills[2] == true) {
             System.out.println("Enter cost of wifi: ");
             double wifi = keyIn.nextDouble();
             this.bills += wifi;
         }
-
-        // insurance = i
-        if (billsInput.contains("i")) {
+        if (bills[3] == true) {
             System.out.println("Enter cost of insurance: ");
             double insurance = keyIn.nextDouble();
             this.bills += insurance;
         }
+        if (bills[4] == true) {
+            System.out.println("Enter cost of other expenses: ");
+            double other = keyIn.nextDouble();
+            this.bills += other;
+        }
     }
 
-    <<<<<<<HEAD
-}}}=======}>>>>>>>7f ff860da783c469664f03171d955d062b14bc25
+}
