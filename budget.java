@@ -63,8 +63,6 @@ public class budget {
 
         String[] billNames = {"Phone", "Hydro", "WiFi", "Insurance", "Other"};
 
-        System.out.println("Please indicate which bills you pay by typing the appropriate letters: /n phone = p /n hydro = h /n wifi = w /n insurance = i /n/n Type here: ");
-        
         for(int i=0; i<billNames.length;i++){
             System.out.println("Enter 1 if you pay for "+billNames[i] +" otherwise, enter 0:");
             int paid = keyIn.nextInt();
