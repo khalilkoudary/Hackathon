@@ -24,12 +24,12 @@ public class budget {
         System.out.println("Enter 'C' if you own a car, or 'P' if you use public transit");
         String answer = keyIn.nextLine();
         if(answer.toLowerCase().equals("c")){
-            this.transportation= (0.15*(this.moneyToSpend));
+            this.transportation= (0.20*(this.moneyToSpend));
             System.out.println("It is recommended to allocate around 20% of your income towards transportation if you own a car.\nFor you, that comes to: $" + transportation);
             input=false;
         }
         else if(answer.toLowerCase().equals("p")){
-            this.transportation= (0.15*(this.moneyToSpend));
+            this.transportation= (0.20*(this.moneyToSpend));
             System.out.println("It is recommended to allocate around 20% of your income towards transportation if you use public transit.\nFor you, that comes to: $" + transportation);
             input = false;
         }
