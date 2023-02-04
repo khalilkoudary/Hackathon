@@ -1,8 +1,9 @@
 package Hackathon;
+
 import java.util.Scanner;
 
-class Calculator{
-       public static void main(String[] argv){
+class Calculator {
+    public static void main(String[] argv){
         
         System.out.println("Welcome to your Student-Budget Calculator!");
 
