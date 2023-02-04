@@ -21,7 +21,7 @@ public class budget {
         this.rent = rent;
     }
 
-    public void getTransportation(){
+    public void setTransportation(){
         boolean input = true;
         while(input){
         System.out.println("Enter 'C' if you own a car, or 'P' if you use public transit");
