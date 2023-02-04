@@ -13,7 +13,8 @@ public class budget {
     private double moneyToSpend = income-rent-bills;
     Scanner keyIn= new Scanner(System.in);
 
-    public budget(double rent) {
+    public budget(double income, double rent) {
+        this.income = income;
         this.rent = rent;
     }
 
