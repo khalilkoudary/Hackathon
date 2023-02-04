@@ -11,7 +11,7 @@ public class budget {
     private double transportation;
     private double entertainment;
     private double bills;
-
+    private double moneyToSpend = income-rent-bills;
     Scanner keyIn= new Scanner(System.in);
 
     public budget(double rent) {
@@ -29,12 +29,12 @@ public class budget {
         System.out.println("Enter 'C' if you own a car, or 'P' if you use public transit");
         String answer = keyIn.nextLine();
         if(answer.toLowerCase().equals("c")){
-            this.transportation= (0.15*(income-rent));
+            this.transportation= (0.15*(this.moneyToSpend));
             System.out.println("It is recommended to allocate around 15% of your income towards transportation if you own a car.\nFor you, that comes to: " + transportation);
             input=false;
         }
         else if(answer.toLowerCase().equals("p")){
-            System.out.println("It is recommended to allocate anywhere from 5% to 10% of your income towards transportation if you use public transit.\nFor you, that comes to: " + (0.05*(income-rent))+"-"+(0.10*income));
+            System.out.println("It is recommended to allocate anywhere from 5% to 10% of your income towards transportation if you use public transit.\nFor you, that comes to: " + (0.05*(moneyToSpend))+"-"+(0.10*moneyToSpend));
             input = false;
         }
         else{
@@ -46,27 +46,7 @@ public class budget {
 
     public void getGroceries() {
         this.groceries = ((this.income - this.rent) * 0.15);
-<<<<<<< HEAD
         System.out.println("You should be spending " + this.groceries + "on groceries per month.");}
-=======
-        System.out.println("You should be spending " + this.groceries + "on groceries per month.");
-    }
-
-    public budget(double income, double rent) {
-        this.income  = income;
-        this.rent = rent;
-    }
-
-<<<<<<< HEAD
-    // 
-=======
-    public double getTransportation() {
-<<<<<<< HEAD
-=======
->>>>>>> 8ef57f8cd1acd1da032cbf50dcaac44a085eef1a
->>>>>>> 572ed4f6f8631848a15ca4a6680860ec7120757a
->>>>>>> 413773dfe22acdde3e6701ad19916ef325d5fe29
->>>>>>> e0f1006b6d43a79217b5d0bb7d354aebdb4cb59e
 
 
     /* 
@@ -82,10 +62,9 @@ public class budget {
     */ 
 
 
-    public double setSavings() {
+    public void setSavings() {
         double percentageOfIncome = 0.1;
         this.savings = this.income * percentageOfIncome;
-        return this.savings;
     }
 
     public double setBills() {
