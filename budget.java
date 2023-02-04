@@ -21,23 +21,20 @@ public class budget {
 
     public void getTransportation() {
         boolean input = true;
-        while (input) {
-            System.out.println("Enter 'C' if you own a car, or 'P' if you use public transit");
-            String answer = keyIn.nextLine();
-            if (answer.toLowerCase().equals("c")) {
-                this.transportation = (0.15 * (income - rent));
-                System.out.println(
-                        "It is recommended to allocate around 15% of your income towards transportation if you own a car.\nFor you, that comes to: "
-                                + transportation);
-                input = false;
-            } else if (answer.toLowerCase().equals("p")) {
-                System.out.println(
-                        "It is recommended to allocate anywhere from 5% to 10% of your income towards transportation if you use public transit.\nFor you, that comes to: "
-                                + (0.05 * (income - rent)) + "-" + (0.10 * income));
-                input = false;
-            } else {
-                System.out.println("Input cannot be recognized, please try again!");
-            }
+        while(input){
+        System.out.println("Enter 'C' if you own a car, or 'P' if you use public transit");
+        String answer = keyIn.nextLine();
+        if(answer.toLowerCase().equals("c")){
+            this.transportation= (0.15*(income-rent));
+            System.out.println("It is recommended to allocate around 15% of your income towards transportation if you own a car.\nFor you, that comes to: " + transportation);
+            input=false;
+        }
+        else if(answer.toLowerCase().equals("p")){
+            System.out.println("It is recommended to allocate anywhere from 5% to 10% of your income towards transportation if you use public transit.\nFor you, that comes to: " + (0.05*(income-rent))+"-"+(0.10*income));
+            input = false;
+        }
+        else{
+            System.out.println("Input cannot be recognized, please try again!");
         }
     }
 
@@ -55,7 +52,29 @@ public class budget {
         this.rent = rent;
     }
 
+    <<<<<<<HEAD
+    //
+    =======
+
     public double getTransportation() {
+<<<<<<< HEAD
+=======
+>>>>>>> 8ef57f8cd1acd1da032cbf50dcaac44a085eef1a
+>>>>>>> 572ed4f6f8631848a15ca4a6680860ec7120757a
+>>>>>>> 413773dfe22acdde3e6701ad19916ef325d5fe29
+
+
+    /* 
+    if u pay rent: 
+    moneyForBudget = income - rent
+
+    else:
+    moneyForBudget = income 
+
+    ----
+    entertainment = moneyForBudget - getSavings()
+
+    */
 
     public double getTransportation() {
         return 0;
@@ -64,7 +83,6 @@ public class budget {
     public double setSavings() {
         double percentageOfIncome = 0.1;
         this.savings = this.income * percentageOfIncome;
-        return this.savings;
     }
 
     public double setBills() {
@@ -90,7 +108,7 @@ public class budget {
         if (billsInput.contains("w")) {
             Scanner wifiObj = new Scanner(System.in);
             System.out.println("Enter cost of wifi: ");
-            double wifi = scanObj.nextDouble();
+            double wifi = keyIn.nextDouble();
             this.bills += wifi;
         }
 
@@ -102,5 +120,4 @@ public class budget {
         return this.bills;
     }
 
-}
-}
+}}
