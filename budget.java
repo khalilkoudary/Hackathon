@@ -22,19 +22,20 @@ public class budget {
     public void getTransportation(){
         boolean input = true;
         while(input){
-        System.out.println("Enter 'C' if you own a car, or 'P' if you use public transit");
-        String answer = keyIn.nextLine();
-        if(answer.toLowerCase().equals("c")){
-            this.transportation= (0.15*(income-rent));
-            System.out.println("It is recommended to allocate around 15% of your income towards transportation if you own a car.\nFor you, that comes to: " + transportation);
-            input=false;
-        }
-        else if(answer.toLowerCase().equals("p")){
-            System.out.println("It is recommended to allocate anywhere from 5% to 10% of your income towards transportation if you use public transit.\nFor you, that comes to: " + (0.05*(income-rent))+"-"+(0.10*income));
-            input = false;
-        }
-        else{
-            System.out.println("Input cannot be recognized, please try again!");
+            System.out.println("Enter 'C' if you own a car, or 'P' if you use public transit");
+            String answer = keyIn.nextLine();
+            if(answer.toLowerCase().equals("c")){
+                this.transportation= (0.15*(income-rent));
+                System.out.println("It is recommended to allocate around 15% of your income towards transportation if you own a car.\nFor you, that comes to: " + transportation);
+                input=false;
+            }
+            else if(answer.toLowerCase().equals("p")){
+                System.out.println("It is recommended to allocate anywhere from 5% to 10% of your income towards transportation if you use public transit.\nFor you, that comes to: " + (0.05*(income-rent))+"-"+(0.10*income));
+                input = false;
+            }
+            else{
+                System.out.println("Input cannot be recognized, please try again!");
+            }
         }
     }
 
@@ -65,7 +66,7 @@ public class budget {
         return this.savings;
     }
 
-    public double setBills() {
+    public void setBills() {
         
         System.out.println("Please indicate which bills you pay by typing the appropriate letters: /n phone = p /n hydro = h /n wifi = w /n insurance = i /n/n Type here: ");
         
@@ -75,7 +76,6 @@ public class budget {
         // phone = p
         if (billsInput.contains("p")) {
             
-
             this.bills += (this.income * 0.03);
         }
 
@@ -96,7 +96,6 @@ public class budget {
         if (billsInput.contains("i")) {
             this.bills += (this.income * 0.05);
         }
-        return this.bills;
     }
 
 }
