@@ -1,6 +1,7 @@
 package Hackathon;
 
 public class budget {
+    private double income;
     private double rent;
     private double groceries;
     private double savings;
