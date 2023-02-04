@@ -9,7 +9,13 @@ public class budget {
     private double entertainment; 
     private double bills;
 
-    public budget(double rent){
-        this.rent=rent;
+    public budget(double income, double rent){
+        this.income= income;
+        this.rent = rent;
+    }
+
+    
+    public double getTransportation(){
+        return 
     }
 }
