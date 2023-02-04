@@ -55,11 +55,20 @@ public class budget {
         System.out.println(
                 "Please indicate which bills you pay by typing the appropriate letters: /n phone = p /n hydro = h /n wifi = w /n insurance = i /n/n Type here: ");
 
-        String billsInput = keyIn.nextLine();
-        // Allocation of a maximum of 25% of total income to bills
+        String[] billNames = { "Phone", "Hydro", "WiFi", "Insurance", "Other" };
 
-        // phone = p
-        if (billsInput.contains("p")) {
+        System.out.println(
+                "Please indicate which bills you pay by typing the appropriate letters: /n phone = p /n hydro = h /n wifi = w /n insurance = i /n/n Type here: ");
+
+        for (int i = 0; i < billNames.length; i++) {
+            System.out.println("Enter 1 if you pay for " + billNames[i] + " otherwise, enter 0:");
+            int paid = keyIn.nextInt();
+
+            if (paid == 1) {
+                bills[i] = true;
+            }
+        }
+        if (bills[0] == true) {
             System.out.println("Enter cost of phone bill: ");
             double phone = keyIn.nextDouble();
             this.bills += phone;
