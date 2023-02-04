@@ -6,10 +6,14 @@ public class budget {
     private double groceries;
     private double savings;
     private double transportation;
-    private double entertainment; 
+    private double entertainment;
     private double bills;
 
-    public budget(double rent){
-        this.rent=rent;
+    public budget(double rent) {
+        this.rent = rent;
+    }
+
+    public double getGroceries() {
+        return (this.groceries * 0.15)
     }
 }
