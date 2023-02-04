@@ -24,7 +24,7 @@ class Calculator {
 
         while(menu){
             System.out.println("Please select one of the following options:");
-            System.out.println("1. Transportation\n2. Food \n3. Savings \n4. Personal \n")
+            System.out.println("1. Transportation\n2. Food \n3. Savings")
 
 
         }
