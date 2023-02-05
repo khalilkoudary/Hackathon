@@ -3,6 +3,7 @@ package Hackathon;
 import java.util.Scanner;
 
 public class budget {
+    
     private double income;
     private double rent;
     private double groceries;
@@ -20,23 +21,6 @@ public class budget {
 
     public void getTransportation() {
         boolean input = true;
-<<<<<<< HEAD
-        while(input){
-        System.out.println("Enter 'C' if you own a car, or 'P' if you use public transit");
-        String answer = keyIn.nextLine();
-        if(answer.toLowerCase().equals("c")){
-            this.transportation= (0.20*(this.moneyToSpend));
-            System.out.println("It is recommended to allocate around 20% of your income towards transportation if you own a car.\nFor you, that comes to: $" + transportation);
-            input=false;
-        }
-        else if(answer.toLowerCase().equals("p")){
-            this.transportation= (0.20*(this.moneyToSpend));
-            System.out.println("It is recommended to allocate around 20% of your income towards transportation if you use public transit.\nFor you, that comes to: $" + transportation);
-            input = false;
-        }
-        else{
-            System.out.println("Input cannot be recognized, please try again!");
-=======
         while (input) {
             System.out.println("Enter 'C' if you own a car, or 'P' if you use public transit");
             String answer = keyIn.nextLine();
@@ -54,7 +38,6 @@ public class budget {
             } else {
                 System.out.println("Input cannot be recognized, please try again!");
             }
->>>>>>> 22d911d8cfea75e7f0b987cf44e0b7526c98c7b9
         }
     }
 
@@ -70,28 +53,11 @@ public class budget {
     }
 
     public void setBills() {
-<<<<<<< HEAD
-        
 
-        boolean[] bills = new boolean[5];
-        for(int m=0; m<bills.length;m++){
-            bills[m]=false;
+        boolean bills[]= new boolean[5];
+        for(int i=0; i<bills.length;i++){
+            bills[i]=false;
         }
-
-        String[] billNames = {"Phone", "Hydro", "WiFi", "Insurance", "Other"};
-        
-        for(int i=0; i<billNames.length;i++){
-            System.out.println("Enter 1 if you pay for "+billNames[i] +" otherwise, enter 0:");
-            int paid = keyIn.nextInt();
-
-
-            if(paid==1){
-                bills[i]=true;
-=======
-
-        System.out.println(
-                "Please indicate which bills you pay by typing the appropriate letters: /n phone = p /n hydro = h /n wifi = w /n insurance = i /n/n Type here: ");
-
         String[] billNames = { "Phone", "Hydro", "WiFi", "Insurance", "Other" };
 
         System.out.println(
@@ -103,7 +69,6 @@ public class budget {
 
             if (paid == 1) {
                 bills[i] = true;
->>>>>>> 22d911d8cfea75e7f0b987cf44e0b7526c98c7b9
             }
         }
         if (bills[0] == true) {
@@ -132,10 +97,5 @@ public class budget {
             this.bills += other;
         }
     }
-<<<<<<< HEAD
         
 }
-=======
-
-}
->>>>>>> 22d911d8cfea75e7f0b987cf44e0b7526c98c7b9
